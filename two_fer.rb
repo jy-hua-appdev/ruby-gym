@@ -9,3 +9,11 @@
 # If no name is given, the result should be "One for you, one for me."
 
 p "Enter a name:"
+
+a = gets.chomp
+if (a.empty?)
+  p "One for you, one for me." 
+  
+elsif 
+  p "One for " + a.capitalize + ", one for me."
+end

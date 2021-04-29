@@ -15,7 +15,7 @@
 # Next, remember that there's a method called `.class` that we can call on any Ruby object
 #   to find out what kind of thing it is. We first met it way back in the Integer Chapter,
 #   and we used it a lot especially when exploring an API response, which could come back to us in different shapes and sizes.
-
+require 'date'
 unpredictable_inputs = [
   "Hello!",
   Time.now,
@@ -33,3 +33,26 @@ p some_random_input
 
 # Write your code below
 
+a = some_random_input
+case a.class.to_s
+when "Time"
+  p a.strftime("%A").downcase
+when "String"
+  p a.downcase
+when "FalseClass"
+  p "you may not pass"
+when "NilClass"
+  p "no object provided"
+when "TrueClass"
+  p "you may pass"
+when "Integer"
+  if a.odd?
+    p a.to_s + " is odd"
+  else
+    p a.to_s + " is even"
+  end
+when "Symbol"
+  p a.downcase
+when "Hash"
+  p a.keys
+end

@@ -4,3 +4,6 @@
 #   and finally prints, "'the' appeared x times", where x is an Integer
 
 p "Enter a sentence:"
+string = gets.chomp
+a = string.scan(/\b(?:#{"the"})\b/).count
+  p "'the' appeared " + a.to_s + " times"

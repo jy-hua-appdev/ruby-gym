@@ -5,10 +5,12 @@
 
 p "Are we there yet?"
 
+a = Array.new
 answer = gets.chomp.downcase
-
+  a.append(answer)
 while answer != "yes"
   p "Are we there yet?"
-  
   answer = gets.chomp.downcase
+  a.append(answer)
 end
+p a

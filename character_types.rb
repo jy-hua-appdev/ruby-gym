@@ -14,3 +14,21 @@
 #  "Number of digits in the string is: 4"
 
 p "Enter a sentence:"
+chars = gets.chomp
+l = 0
+s = 0
+d = 0
+chars.each_char  { |c|
+  if c == " "
+    s=s+1
+  elsif 48 <= c.ord && c.ord <= 57
+    d =d +1
+  else
+    l = l + 1
+  end
+}
+
+    
+p "Number of letters in the string is: " + l.to_s
+p "Number of spaces in the string is: " + s.to_s
+p "Number of digits in the string is: " + d.to_s

@@ -11,3 +11,14 @@
 # 16
 
 p "Enter at least 2 numbers, separated by spaces:"
+
+a = gets.chomp
+a = a.split(" ")
+i = 0
+a.each { |c|
+    c = c.to_i
+    if c.odd?
+      i +=c
+    end
+}
+p i
